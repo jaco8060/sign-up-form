@@ -46,7 +46,7 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
+/* --------------------------------------------------------------------------------------------- */
 body{
     font-family: 'Roboto', sans-serif;
 }
@@ -54,33 +54,41 @@ body{
     font-style: italic;
 }
 
-img {
-    height: 56.25rem;
-    width: 37.5rem;
-    object-fit: cover;  
-    /* crops the picture to be in the middle of the frame */
-    object-position: 50%;
-}
 
+.panda-logo {
+    height: 4rem;
+    width: 4rem;
+    display: inline;
+}
 .header>p {
     font-weight: 700;
 }
 
 .image-container {
-    position: relative;
+    display: flex;
     height: 56.25rem;
     width: 37.5rem;
+    background-size: cover; /* Cover the entire area of the container */
+    /* crops the picture to be in the middle of the frame */
+    background-position: center; /* Center the image in the container */
+    background-image: url('/img/panda\ background.webp'); /* Path to your image */
+    background-repeat: no-repeat; /* Prevent repeating the image */
+    align-items: flex-start; /* Align items to the start (top) of the container */
+    padding-top: 5%; /* Adjust this value as needed */
 }
 
-.image-container>.text {
-    font-size: 3.5rem;
+.image-container > .text-container{
+    display: flex;
+    
+    font-size: 3rem;
+    text-align: center;
     font-family: 'EB Garamond', serif;
-    color: black;
-    position: absolute;
-    top: 25%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    width: 95%;
+    color: white; /* Opaque text color */
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    height: 5.5rem;
+    background-color: rgba(0, 0, 0, 0.5); /* Grey background with 50% opacity */
+    opacity: 1; /* Full opacity for the text */
 }
-
