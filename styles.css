@@ -1,3 +1,13 @@
 .ital {
     font-style: italic;
 }
+
+img {
+    height: 56.25rem;
+    width: 37.5rem;
+    object-fit: cover;  
+    /* crops the picture to be in the middle of the frame */
+    object-position: 50%;
+}
+
+
