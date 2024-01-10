@@ -53,21 +53,16 @@ body{
 .ital {
     font-style: italic;
 }
-
-
 .panda-logo {
     height: 4rem;
     width: 4rem;
     display: inline;
 }
-.header>p {
-    font-weight: 700;
-}
 
 .image-container {
     display: flex;
-    height: 56.25rem;
-    width: 37.5rem;
+    height: 100vh;
+    width: 50vw;
     background-size: cover; /* Cover the entire area of the container */
     /* crops the picture to be in the middle of the frame */
     background-position: center; /* Center the image in the container */
@@ -80,15 +75,89 @@ body{
 .image-container > .text-container{
     display: flex;
     
-    font-size: 3rem;
+    font-size: clamp(1vh, 2vw, 4vh); /* Responsive font size */
     text-align: center;
     font-family: 'EB Garamond', serif;
     color: white; /* Opaque text color */
     justify-content: center;
     align-items: center;
-    gap: 1rem;
     width: 100%;
     height: 5.5rem;
     background-color: rgba(0, 0, 0, 0.5); /* Grey background with 50% opacity */
     opacity: 1; /* Full opacity for the text */
 }
+
+.main-container {
+    display: flex;
+
+}
+
+.container{
+    display: flex;
+    width: 80vw;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(246, 246, 246);
+    gap: 10vh;
+}
+.header>p {
+    font-weight: 700;
+    font-size: clamp(1.5vh, 3vw, 3vh); /* Responsive font size */
+    padding: 0 6% 0 5%;
+}
+fieldset{
+    padding: 1vh 0;
+    border-top: #f0eeee;
+    border-width: .1vh;
+    border-style: solid;
+    box-shadow: 0px 5px 5px rgb(146, 146, 146);
+    background-color: white;
+    height: 100%;
+}
+
+.sign-up {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2vh;
+    
+  }
+  .legend{
+    padding: 0 5%;
+    font-size: 2vh;
+    text-align: left;
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    padding: 0 5%;
+    width: 35vw;
+  }
+  
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    gap: .5vh;
+    margin-top: 1vh;
+  }
+
+  input{
+    border-color: #E5E7EB;
+    border-radius: 5px;
+    border-style:solid;
+    width: 80%;
+    height: 2.5vh;
+  }
+
+  label {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 1.5vh;
+    color:#3a3a3a
+  }
+  
+  @media screen and (max-width: 600px) {
+    .grid-container {
+      grid-template-columns: 1fr; /* Stack columns on smaller screens */
+    }
+  }
+  
