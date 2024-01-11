@@ -186,12 +186,24 @@ fieldset{
   .footer input:hover{
     border:.2vh ridge darkblue;
     border-style:solid;
+    cursor: pointer;
   }
   .footer a {
     text-decoration: none;
   }
   .footer a:hover {
     text-decoration: underline;
+  }
+
+  .hidden {
+    display: none;
+  }
+  .hintVisible {
+    display: block;
+    width: 90%;
+    font-size: 1.2vh;
+    margin-top: 0.5vh;
+    color: red;
   }
   @media screen and (max-width: 600px) {
     .grid-container {
