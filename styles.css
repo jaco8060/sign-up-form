@@ -106,7 +106,7 @@ body{
     padding: 0 6% 0 5%;
 }
 fieldset{
-    padding: 1vh 0;
+    padding: 2vh 0 0 0;
     border:.1vh solid transparent;
     border-top: #eceaea;
     border-width: .1vh;
@@ -124,7 +124,7 @@ fieldset{
   }
   .legend{
     padding: 0 5%;
-    font-size: 2vh;
+    font-size: 2.5vh;
     text-align: left;
   }
   .grid-container {
@@ -178,8 +178,21 @@ fieldset{
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
     font-size: clamp(1.5vh, 1.5vw, 2vh); /* Responsive font size */
+    background-color: lightblue;
+    border-radius: 8px;
+    border:.1vh solid transparent;
+    box-shadow: 0px 5px 5px rgb(146, 146, 146);
   }
-
+  .footer input:hover{
+    border:.2vh ridge darkblue;
+    border-style:solid;
+  }
+  .footer a {
+    text-decoration: none;
+  }
+  .footer a:hover {
+    text-decoration: underline;
+  }
   @media screen and (max-width: 600px) {
     .grid-container {
       grid-template-columns: 1fr; /* Stack columns on smaller screens */
