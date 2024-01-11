@@ -34,7 +34,7 @@
           <br />
           <p>You <span class="ital">know</span> you want to.</p>
         </div>
-        <form class="sign-up">
+        <form class="sign-up" id="signupForm">
           <fieldset>
             <h3 class="legend">Lets do this!</h3>
             <div class="grid-container">
@@ -47,6 +47,8 @@
                     name="first_name"
                     id="first_name"
                     maxlength="150"
+                    required
+                    tabindex="1"
                   />
                 </div>
                 <div class="input-group">
@@ -57,6 +59,7 @@
                     id="email"
                     maxlength="100"
                     required
+                    tabindex="3"
                   />
                 </div>
 
@@ -66,7 +69,9 @@
                     type="password"
                     name="password"
                     maxlength="20"
+                    minlength="8"
                     required
+                    tabindex="5"
                   />
                 </div>
               </div>
@@ -75,10 +80,12 @@
                 <div class="input-group">
                   <label for="last_name">LAST NAME</label>
                   <input
+                    tabindex="2"
                     type="text"
                     name="last_name"
                     id="last_name"
                     maxlength="150"
+                    required
                   />
                 </div>
                 <div class="input-group">
@@ -89,6 +96,8 @@
                     name="phone"
                     pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                     required
+                    placeholder="123-456-7890"
+                    tabindex="4"
                   />
                 </div>
                 <div class="input-group">
@@ -96,16 +105,32 @@
                   <input
                     type="password"
                     name="confirm_password"
+                    minlength="8"
                     maxlength="20"
                     required
+                    tabindex="6"
                   />
                 </div>
               </div>
             </div>
           </fieldset>
         </form>
+        <div class="footer">
+          <input
+            type="submit"
+            name="submit"
+            id="submit"
+            class="submit"
+            value="Create Account"
+            form="signupForm"
+          />
 
-        <div class="footer"></div>
+          <h3 class="footer-text">
+            <br />
+            Already have an account?
+            <span><a href="#first_name" class="login-link">Login</a></span>
+          </h3>
+        </div>
       </div>
     </div>
   </body>
